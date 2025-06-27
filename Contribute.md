@@ -18,10 +18,13 @@
 - Start postgres
   - docker run --name my_postgres -e POSTGRES_PASSWORD=mysecretpassword --network prisma-to-express -d -p 5432:5432 postgres
 
-- Build the image - `docker build --network=host -t user-project .`
-- Start the image - `docker run --network prisma-to-express -e DATABASE_URL=postgresql://postgres:mysecretpassword@my_postgres:5432/postgres -p 3000:3000 user-project`
+- Build the image - `docker build -t user-project .`
+- Start the image - `docker run --network prisma-to-express -p 3000:3000 user-project`
 
 ## Docker Compose installation steps 
 - Install docker , docker-compose 
+<!-- phle build script start hoti hai 
+uske bad start wali script start hoti hai 
+so based on ordre we can use depends_on thing in the docker-compose -->
 - Run `docker-compose up`
   
